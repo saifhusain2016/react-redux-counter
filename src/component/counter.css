@@ -1,0 +1,21 @@
+#counterDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  background-color: blanchedalmond;
+}
+
+#counterDiv > button {
+  color: rgb(8, 8, 8);
+  border-radius: 20px;
+  background: rgb(3, 250, 176);
+  width: 100px;
+  height: 30px;
+}
+
+#counterDiv > label {
+  font-size: 30px;
+}
