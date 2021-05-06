@@ -1,11 +1,16 @@
 #counterDiv {
   display: flex;
   flex-direction: column;
+  width: 400px;
   justify-content: center;
   align-items: center;
   align-content: center;
   gap: 10px;
   background-color: blanchedalmond;
+  border: solid black;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  border-radius: 20px;
 }
 
 #counterDiv > button {
@@ -13,6 +18,13 @@
   border-radius: 20px;
   background: rgb(3, 250, 176);
   width: 100px;
+  height: 30px;
+}
+
+#counterDiv > input {
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
   height: 30px;
 }
 

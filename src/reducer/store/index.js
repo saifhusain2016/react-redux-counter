@@ -15,6 +15,16 @@ const counterReducer = (state = initialState, action) => {
       count: state.count - 1,
     };
   }
+  if (action.type === "add") {
+    return {
+      count: state.count + +action.payload,
+    };
+  }
+  if (action.type === "subtract") {
+    return {
+      count: state.count - +action.payload,
+    };
+  }
   return state;
 };
 

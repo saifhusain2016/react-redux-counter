@@ -5,8 +5,10 @@ import Counter from "./component/counter";
 function App() {
   return (
     <div>
-      <div></div>
-      <Counter />
+      <div id="counterWrapper">
+        <h1> Redux Counter</h1>
+        <Counter />
+      </div>
     </div>
   );
 }
