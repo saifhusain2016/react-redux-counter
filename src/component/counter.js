@@ -1,26 +1,27 @@
 import "./counter.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
+import { counterActions } from "../reducer/store/index";
 
 function Counter() {
   const count = useSelector((state) => state.count);
   const dispatch = useDispatch();
-  const [payload, setPayload] = useState(0);
+  const [value, setValue] = useState(0);
 
   function increament() {
-    dispatch({ type: "increament" });
+    dispatch(counterActions.increament());
   }
 
   function decreament() {
-    dispatch({ type: "decreament" });
+    dispatch(counterActions.decreament());
   }
 
   function add() {
-    dispatch({ type: "add", payload });
+    dispatch(counterActions.add(value));
   }
 
   function subtract() {
-    dispatch({ type: "subtract", payload });
+    dispatch(counterActions.subtract(value));
   }
 
   return (
@@ -33,9 +34,9 @@ function Counter() {
         Decrease
       </button>
       <input
-        htmlFor="payload"
+        htmlFor="value"
         placeholder="Enter value to add/subtract"
-        onChange={(e) => setPayload(e.target.value)}
+        onChange={(e) => setValue(e.target.value)}
       />
       <button class="calc" onClick={add}>
         Add
